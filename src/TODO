@@ -1,0 +1,8 @@
+Things I think might be nice to implement
+
+* Vertical/Horizontal Maximizing of MDI child windows
+* Changing the mouse cursor while moving/resizing window
+  This one requires some kind of hooking into other windows'
+  event loops, which makes it kinda hackish, but if there is
+  enough request for this feature, I might one day take 
+  another look at it.
