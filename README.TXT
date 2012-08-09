@@ -39,7 +39,7 @@ licence see Copying.txt, which is included in the distribution.
 
 And BTW, Win32WM stands (or originally stood) for Win32 Window Manager :)
 
-Default heyboard shortcuts
+Default keyboard shortcuts
 ---------------------------
 Maximize vertically        Win+V
 Maximize horizontally      Win+H
@@ -138,10 +138,10 @@ The configuration dialog box includes the following settings:
 
 
 
-For more information on VirtuaWin see http://w1.457.telia.com/~u45706979/.
+For more information on VirtuaWin see http://virtuawin.sourceforge.net/
 
 For more information on Win32WM email me.
 
 
     Matti Jagula
-    matti.jagula@proekspert.ee
+    matti.jagula@gmail.com
