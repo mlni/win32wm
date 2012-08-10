@@ -1,4 +1,4 @@
-
+﻿
 Win32WM Overview and Usage
 --------------------------
 Win32WM is a VirtuaWin module that handles a couple of window manager
@@ -145,3 +145,8 @@ For more information on Win32WM email me.
 
     Matti Jagula
     matti.jagula@gmail.com
+
+
+Contributions
+
+May 2012 - Александр Хухлаев contributed a patch that fixes hotkey-related warnings on startup
