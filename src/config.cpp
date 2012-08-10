@@ -177,13 +177,14 @@ BOOL RegisterAllHotkeys()
 		char *registryKey;  // the registry key holding the hotkey 
 		char *errorMessage; // the message to display if registering fails
 		char *defaultHotkey;// default value 
+		BOOL enabled;		// enabled
 	} hotkeyConstants[] = 
 	{
-		{ atomVertical,     "MaximizeVertical",   "Maximize Vertically",   "WIN+V" },
-		{ atomHorizontal,   "MaximizeHorizontal", "Maximize Horizontally", "WIN+H" },
-		{ atomMaximize,		"Maximize",			  "Maximize",			   "WIN+X" },
-		{ atomMinimize,		"Minimize",			  "Minimize",              "WIN+Z" },
-		{ atomBackground,	"SendToBackground",	  "Send To background",    "WIN+B" }
+		{ atomVertical,     "MaximizeVertical",   "Maximize Vertically",   "WIN+V", useVertical },
+		{ atomHorizontal,   "MaximizeHorizontal", "Maximize Horizontally", "WIN+H", useHorizontal },
+		{ atomMaximize,		"Maximize",			  "Maximize",			   "WIN+X", useMaximize },
+		{ atomMinimize,		"Minimize",			  "Minimize",              "WIN+Z", useMinimize },
+		{ atomBackground,	"SendToBackground",	  "Send To background",    "WIN+B", useBackground }
 	};
 
 	BOOL result = TRUE;
@@ -191,7 +192,8 @@ BOOL RegisterAllHotkeys()
 
 	for( i=0; i< sizeof( hotkeyConstants ) / sizeof( _HOTKEYCONST ) ; i++ )
 	{
-		result &= RegisterSingleHotkey( hotkeyConstants[i].atom, hotkeyConstants[i].registryKey,
+		if(hotkeyConstants[i].enabled)
+			result &= RegisterSingleHotkey( hotkeyConstants[i].atom, hotkeyConstants[i].registryKey,
 						hotkeyConstants[i].errorMessage, hotkeyConstants[i].defaultHotkey );
 	}
 	
